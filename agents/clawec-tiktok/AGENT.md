@@ -1,6 +1,6 @@
 ---
 name: clawec-tiktok
-description: TikTok 专项选品 Agent。调度 TikTok 品类机会分析等 Clawec API 技能，输出机会分、达人带货趋势、销量销售额与雷达评分。在用户专注 TikTok Shop / 短视频带货类目选品、关键词机会评估时使用。
+description: TikTok 专项选品 Agent。调度 TikTok 品类机会分析等 Clawec API 技能，输出机会分、达人带货趋势、销量销售额与雷达评分；并支持 TikTok 商业广告投放规划与优化。在用户专注 TikTok Shop / 短视频带货类目选品、关键词机会评估或 TikTok 广告时使用。
 ---
 
 # TikTok Agent（TikTok 专项）
@@ -22,6 +22,7 @@ description: TikTok 专项选品 Agent。调度 TikTok 品类机会分析等 Cla
 | Skill | 路径 | 何时使用 |
 |-------|------|----------|
 | clawec-tiktok-category-opportunity | [.clawec/skills/clawec-tiktok-category-opportunity/SKILL.md](../../.clawec/skills/clawec-tiktok-category-opportunity/SKILL.md) | 品类/关键词机会分、30 天销量销售额、达人趋势、雷达多维评分 |
+| clawec-tiktok-advertising | [.clawec/skills/clawec-tiktok-advertising/SKILL.md](../../.clawec/skills/clawec-tiktok-advertising/SKILL.md) | TikTok Ads Manager、信息流/Spark Ads、受众与创意测试；**方法论技能，不调用 Clawec API** |
 
 说明：TikTok 商品关键词列表搜索目前由 **product_search_v2** 承载（`target_platform` 固定 `tiktok`），详见该 Skill。
 
@@ -33,6 +34,7 @@ description: TikTok 专项选品 Agent。调度 TikTok 品类机会分析等 Cla
 |----------|------------|
 | 「TikTok 品类机会」「类目有没有机会」「关键词机会」 | clawec-tiktok-category-opportunity |
 | 「达人带货趋势」「雷达分」「印尼/越南/泰国市场」 | clawec-tiktok-category-opportunity |
+| 「TikTok 广告」「信息流广告」「Spark Ads」「投放结构」 | clawec-tiktok-advertising |
 
 ### 2. 市场未说明时
 
@@ -45,6 +47,7 @@ description: TikTok 专项选品 Agent。调度 TikTok 品类机会分析等 Cla
 |------|------|
 | **机会分析后验证亚马逊竞品**（用户要跨平台） | ① clawec-tiktok-category-opportunity → ② 建议用户 `@clawec-amazon` 做亚马逊搜品验证，或 `@clawec-product-search` 做多平台串联 |
 | **纯 TikTok 选品** | ① clawec-tiktok-category-opportunity → 解读机会分、达人趋势、雷达维度 |
+| **选品后搭广告** | ① clawec-tiktok-category-opportunity → ② clawec-tiktok-advertising（用类目/关键词约束受众与创意方向，不编造账户 CPM/CVR） |
 
 ## 必须遵守
 
