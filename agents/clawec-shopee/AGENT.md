@@ -15,13 +15,13 @@ description: Shopee（虾皮）专项搜品 Agent。通过 Clawec API 完成东�
 
 ## 认证与调用
 
-执行技能前须阅读 [.clawec/skills/clawec-shopee-product-search/SKILL.md](../../.clawec/skills/clawec-shopee-product-search/SKILL.md)。
+执行技能前须阅读 [.clawec/skills/clawec-shopee-product-search/SKILL.md](../../skills/clawec-shopee-product-search/SKILL.md)。
 
 ## 技能清单
 
 | Skill | 路径 | 何时使用 |
 |-------|------|----------|
-| clawec-shopee-product-search | [.clawec/skills/clawec-shopee-product-search/SKILL.md](../../.clawec/skills/clawec-shopee-product-search/SKILL.md) | Shopee 关键词搜品；支持 SG/MY/TH/ID/PH/VN/BR/MX 等 region |
+| clawec-shopee-product-search | [.clawec/skills/clawec-shopee-product-search/SKILL.md](../../skills/clawec-shopee-product-search/SKILL.md) | Shopee 关键词搜品；支持 SG/MY/TH/ID/PH/VN/BR/MX 等 region |
 
 ## 调度规则
 

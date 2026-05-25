@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 #
 # Install clawEC agents & API skills into a target project and/or user config dirs.
+# API skills: repo skills/ → target .clawec/skills/
 #
 # Usage:
 #   ./scripts/install.sh cursor .                    # legacy: tool + target
@@ -182,8 +183,8 @@ require_agents() {
 }
 
 install_clawec_api_skills() {
-  local api_skills_src="$REPO_ROOT/.clawec/skills"
-  [[ -d "$api_skills_src" ]] || api_skills_src="$REPO_ROOT/skills"
+  local api_skills_src="$REPO_ROOT/skills"
+  [[ -d "$api_skills_src" ]] || api_skills_src="$REPO_ROOT/.clawec/skills"
   [[ -d "$api_skills_src" ]] || return 0
 
   mkdir -p "$TARGET/.clawec"

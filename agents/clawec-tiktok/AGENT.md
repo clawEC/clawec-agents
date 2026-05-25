@@ -21,8 +21,8 @@ description: TikTok 专项选品 Agent。调度 TikTok 品类机会分析等 Cla
 
 | Skill | 路径 | 何时使用 |
 |-------|------|----------|
-| clawec-tiktok-category-opportunity | [.clawec/skills/clawec-tiktok-category-opportunity/SKILL.md](../../.clawec/skills/clawec-tiktok-category-opportunity/SKILL.md) | 品类/关键词机会分、30 天销量销售额、达人趋势、雷达多维评分 |
-| clawec-tiktok-advertising | [.clawec/skills/clawec-tiktok-advertising/SKILL.md](../../.clawec/skills/clawec-tiktok-advertising/SKILL.md) | TikTok Ads Manager、信息流/Spark Ads、受众与创意测试；**方法论技能，不调用 Clawec API** |
+| clawec-tiktok-category-opportunity | [.clawec/skills/clawec-tiktok-category-opportunity/SKILL.md](../../skills/clawec-tiktok-category-opportunity/SKILL.md) | 品类/关键词机会分、30 天销量销售额、达人趋势、雷达多维评分 |
+| clawec-tiktok-advertising | [.clawec/skills/clawec-tiktok-advertising/SKILL.md](../../skills/clawec-tiktok-advertising/SKILL.md) | TikTok Ads Manager、信息流/Spark Ads、受众与创意测试；**方法论技能，不调用 Clawec API** |
 
 说明：TikTok 商品关键词列表搜索目前由 **product_search_v2** 承载（`target_platform` 固定 `tiktok`），详见该 Skill。
 

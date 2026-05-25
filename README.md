@@ -28,7 +28,7 @@ clawec-agents/
 ├── README.md
 ├── agents/                    # Agent 源定义
 │   └── clawec-<agent-name>/AGENT.md
-├── .clawec/skills/            # Clawec API 技能（API 参数与脚本，供 Agent 读取）
+├── skills/                    # Clawec API 技能源（安装时同步到用户项目的 .clawec/skills/）
 │   └── clawec-<skill-name>/SKILL.md
 └── scripts/install.sh
 ```
@@ -62,7 +62,7 @@ clawec-agents/
 # 并行：./scripts/install.sh --no-interactive --tool all --parallel
 ```
 
-所有工具安装时，除 `--rules-only` 外都会同步项目下的 **`.clawec/skills/`**（Clawec API 文档）。Copilot / Antigravity / Gemini CLI / Kimi / OpenClaw 的 Agent 文件在用户目录；Cursor / Claude Code / Codex / OpenCode / Qwen / Aider / Windsurf 以**项目目录**为安装目标（命令末尾的 `.` 或路径）。
+所有工具安装时，除 `--rules-only` 外都会将本仓库 **`skills/`** 同步到目标项目的 **`.clawec/skills/`**（Clawec API 文档；Agent 内链接亦会改写为该路径）。Copilot / Antigravity / Gemini CLI / Kimi / OpenClaw 的 Agent 文件在用户目录；Cursor / Claude Code / Codex / OpenCode / Qwen / Aider / Windsurf 以**项目目录**为安装目标（命令末尾的 `.` 或路径）。
 
 **快速安装：**
 
@@ -115,30 +115,6 @@ export CLAWEC_API_KEY="你的密钥"
 echo 'export CLAWEC_API_KEY="你的密钥"' >> ~/.zshrc
 source ~/.zshrc
 ```
-
-若使用 bash，将 `~/.zshrc` 改为 `~/.bashrc`。
-
-**仅当前项目（可提交 `.env.example`，勿提交 `.env`）：**
-
-在项目根目录创建 `.env`（并确保已在 `.gitignore` 中忽略 `.env`）：
-
-```bash
-CLAWEC_API_KEY=你的密钥
-```
-
-在 Cursor / 终端启动前加载：
-
-```bash
-set -a && source .env && set +a
-```
-
-#### 3. 验证是否生效
-
-```bash
-echo "${CLAWEC_API_KEY:+已设置（长度 ${#CLAWEC_API_KEY}）}${CLAWEC_API_KEY:-未设置}"
-```
-
-有输出「已设置」即可。在 Cursor 中若 Agent 调 API 仍报未配置 Key，请**重启 Cursor** 或从新开的集成终端里启动 Agent，确保进程能读到上述环境变量。
 
 ## License
 

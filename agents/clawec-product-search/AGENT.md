@@ -21,17 +21,17 @@ description: 商品搜索与选品。可搜亚马逊、1688、Shopee、Temu、Oz
 
 | Skill | 路径 | 何时使用 |
 |-------|------|----------|
-| clawec-amazon-product-search | [.clawec/skills/clawec-amazon-product-search/SKILL.md](../../.clawec/skills/clawec-amazon-product-search/SKILL.md) | 亚马逊关键词搜品、竞品列表、多站点（NA/UK/JP 等） |
-| clawec-amazon-category-opportunity | [.clawec/skills/clawec-amazon-category-opportunity/SKILL.md](../../.clawec/skills/clawec-amazon-category-opportunity/SKILL.md) | 亚马逊品类/关键词**机会分**、趋势、雷达分 |
-| clawec-amazon-asin-query | [.clawec/skills/clawec-amazon-asin-query/SKILL.md](../../.clawec/skills/clawec-amazon-asin-query/SKILL.md) | 已知 ASIN 或商品链接，查单品详情 |
-| clawec-amazon-asin-comment-query | [.clawec/skills/clawec-amazon-asin-comment-query/SKILL.md](../../.clawec/skills/clawec-amazon-asin-comment-query/SKILL.md) | ASIN/链接的**评论**抓取与分析 |
-| clawec-amazon-best-seller | [.clawec/skills/clawec-amazon-best-seller/SKILL.md](../../.clawec/skills/clawec-amazon-best-seller/SKILL.md) | 亚马逊 Best Sellers 畅销榜 |
-| clawec-amazon-new-release | [.clawec/skills/clawec-amazon-new-release/SKILL.md](../../.clawec/skills/clawec-amazon-new-release/SKILL.md) | 亚马逊 New Releases 新品榜 |
-| clawec-1688-product-search | [.clawec/skills/clawec-1688-product-search/SKILL.md](../../.clawec/skills/clawec-1688-product-search/SKILL.md) | **1688 货源**、供应链比价、找工厂 |
-| clawec-shopee-product-search | [.clawec/skills/clawec-shopee-product-search/SKILL.md](../../.clawec/skills/clawec-shopee-product-search/SKILL.md) | Shopee / 东南亚搜品 |
-| clawec-temu-product-search | [.clawec/skills/clawec-temu-product-search/SKILL.md](../../.clawec/skills/clawec-temu-product-search/SKILL.md) | Temu 搜品 |
-| clawec-ozon-product-search | [.clawec/skills/clawec-ozon-product-search/SKILL.md](../../.clawec/skills/clawec-ozon-product-search/SKILL.md) | Ozon / 俄罗斯及东欧搜品 |
-| clawec-tiktok-category-opportunity | [.clawec/skills/clawec-tiktok-category-opportunity/SKILL.md](../../.clawec/skills/clawec-tiktok-category-opportunity/SKILL.md) | TikTok 品类机会、达人带货趋势 |
+| clawec-amazon-product-search | [.clawec/skills/clawec-amazon-product-search/SKILL.md](../../skills/clawec-amazon-product-search/SKILL.md) | 亚马逊关键词搜品、竞品列表、多站点（NA/UK/JP 等） |
+| clawec-amazon-category-opportunity | [.clawec/skills/clawec-amazon-category-opportunity/SKILL.md](../../skills/clawec-amazon-category-opportunity/SKILL.md) | 亚马逊品类/关键词**机会分**、趋势、雷达分 |
+| clawec-amazon-asin-query | [.clawec/skills/clawec-amazon-asin-query/SKILL.md](../../skills/clawec-amazon-asin-query/SKILL.md) | 已知 ASIN 或商品链接，查单品详情 |
+| clawec-amazon-asin-comment-query | [.clawec/skills/clawec-amazon-asin-comment-query/SKILL.md](../../skills/clawec-amazon-asin-comment-query/SKILL.md) | ASIN/链接的**评论**抓取与分析 |
+| clawec-amazon-best-seller | [.clawec/skills/clawec-amazon-best-seller/SKILL.md](../../skills/clawec-amazon-best-seller/SKILL.md) | 亚马逊 Best Sellers 畅销榜 |
+| clawec-amazon-new-release | [.clawec/skills/clawec-amazon-new-release/SKILL.md](../../skills/clawec-amazon-new-release/SKILL.md) | 亚马逊 New Releases 新品榜 |
+| clawec-1688-product-search | [.clawec/skills/clawec-1688-product-search/SKILL.md](../../skills/clawec-1688-product-search/SKILL.md) | **1688 货源**、供应链比价、找工厂 |
+| clawec-shopee-product-search | [.clawec/skills/clawec-shopee-product-search/SKILL.md](../../skills/clawec-shopee-product-search/SKILL.md) | Shopee / 东南亚搜品 |
+| clawec-temu-product-search | [.clawec/skills/clawec-temu-product-search/SKILL.md](../../skills/clawec-temu-product-search/SKILL.md) | Temu 搜品 |
+| clawec-ozon-product-search | [.clawec/skills/clawec-ozon-product-search/SKILL.md](../../skills/clawec-ozon-product-search/SKILL.md) | Ozon / 俄罗斯及东欧搜品 |
+| clawec-tiktok-category-opportunity | [.clawec/skills/clawec-tiktok-category-opportunity/SKILL.md](../../skills/clawec-tiktok-category-opportunity/SKILL.md) | TikTok 品类机会、达人带货趋势 |
 
 ## 调度规则
 

@@ -15,13 +15,13 @@ description: Temu 专项搜品 Agent。通过 Clawec API 完成 Temu 关键词�
 
 ## 认证与调用
 
-执行技能前须阅读 [.clawec/skills/clawec-temu-product-search/SKILL.md](../../.clawec/skills/clawec-temu-product-search/SKILL.md)。
+执行技能前须阅读 [.clawec/skills/clawec-temu-product-search/SKILL.md](../../skills/clawec-temu-product-search/SKILL.md)。
 
 ## 技能清单
 
 | Skill | 路径 | 何时使用 |
 |-------|------|----------|
-| clawec-temu-product-search | [.clawec/skills/clawec-temu-product-search/SKILL.md](../../.clawec/skills/clawec-temu-product-search/SKILL.md) | Temu 关键词搜品、返回价格/销量/评分/链接等 |
+| clawec-temu-product-search | [.clawec/skills/clawec-temu-product-search/SKILL.md](../../skills/clawec-temu-product-search/SKILL.md) | Temu 关键词搜品、返回价格/销量/评分/链接等 |
 
 ## 调度规则
 

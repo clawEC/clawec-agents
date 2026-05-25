@@ -23,31 +23,31 @@ description: 亚马逊专项 Agent。调度 Clawec API 技能（搜品、机会�
 
 | Skill | 路径 | 何时使用 |
 |-------|------|----------|
-| clawec-amazon-product-search | [.clawec/skills/clawec-amazon-product-search/SKILL.md](../../.clawec/skills/clawec-amazon-product-search/SKILL.md) | 关键词搜品、竞品列表、多站点（NA/UK/JP 等） |
-| clawec-amazon-category-opportunity | [.clawec/skills/clawec-amazon-category-opportunity/SKILL.md](../../.clawec/skills/clawec-amazon-category-opportunity/SKILL.md) | 品类/关键词**机会分**、趋势、雷达分 |
-| clawec-amazon-asin-query | [.clawec/skills/clawec-amazon-asin-query/SKILL.md](../../.clawec/skills/clawec-amazon-asin-query/SKILL.md) | 已知 ASIN 或商品链接，查单品详情 |
-| clawec-amazon-asin-comment-query | [.clawec/skills/clawec-amazon-asin-comment-query/SKILL.md](../../.clawec/skills/clawec-amazon-asin-comment-query/SKILL.md) | ASIN/链接的**评论抓取**（原始评论数据） |
-| clawec-amazon-best-seller | [.clawec/skills/clawec-amazon-best-seller/SKILL.md](../../.clawec/skills/clawec-amazon-best-seller/SKILL.md) | Best Sellers 畅销榜 |
-| clawec-amazon-new-release | [.clawec/skills/clawec-amazon-new-release/SKILL.md](../../.clawec/skills/clawec-amazon-new-release/SKILL.md) | New Releases 新品榜 |
+| clawec-amazon-product-search | [.clawec/skills/clawec-amazon-product-search/SKILL.md](../../skills/clawec-amazon-product-search/SKILL.md) | 关键词搜品、竞品列表、多站点（NA/UK/JP 等） |
+| clawec-amazon-category-opportunity | [.clawec/skills/clawec-amazon-category-opportunity/SKILL.md](../../skills/clawec-amazon-category-opportunity/SKILL.md) | 品类/关键词**机会分**、趋势、雷达分 |
+| clawec-amazon-asin-query | [.clawec/skills/clawec-amazon-asin-query/SKILL.md](../../skills/clawec-amazon-asin-query/SKILL.md) | 已知 ASIN 或商品链接，查单品详情 |
+| clawec-amazon-asin-comment-query | [.clawec/skills/clawec-amazon-asin-comment-query/SKILL.md](../../skills/clawec-amazon-asin-comment-query/SKILL.md) | ASIN/链接的**评论抓取**（原始评论数据） |
+| clawec-amazon-best-seller | [.clawec/skills/clawec-amazon-best-seller/SKILL.md](../../skills/clawec-amazon-best-seller/SKILL.md) | Best Sellers 畅销榜 |
+| clawec-amazon-new-release | [.clawec/skills/clawec-amazon-new-release/SKILL.md](../../skills/clawec-amazon-new-release/SKILL.md) | New Releases 新品榜 |
 
 ### 运营、Listing 与卖家支持（方法论，无 API）
 
 | Skill | 路径 | 何时使用 |
 |-------|------|----------|
-| clawec-amazon-listing-standard | [.clawec/skills/clawec-amazon-listing-standard/SKILL.md](../../.clawec/skills/clawec-amazon-listing-standard/SKILL.md) | 新建/重写 Listing：标题、五点、描述（英文标准版） |
-| clawec-amazon-title-optimize | [.clawec/skills/clawec-amazon-title-optimize/SKILL.md](../../.clawec/skills/clawec-amazon-title-optimize/SKILL.md) | 标题与前台文案 SEO 优化、热词埋入 |
-| clawec-amazon-description-optimize | [.clawec/skills/clawec-amazon-description-optimize/SKILL.md](../../.clawec/skills/clawec-amazon-description-optimize/SKILL.md) | 商品描述生成与优化 |
-| clawec-amazon-backend-search-terms | [.clawec/skills/clawec-amazon-backend-search-terms/SKILL.md](../../.clawec/skills/clawec-amazon-backend-search-terms/SKILL.md) | Seller Central 后台 Search Terms |
-| clawec-amazon-trending-keywords | [.clawec/skills/clawec-amazon-trending-keywords/SKILL.md](../../.clawec/skills/clawec-amazon-trending-keywords/SKILL.md) | 热词/引流词候选（须自行用工具验证量级） |
-| clawec-amazon-listing-localize | [.clawec/skills/clawec-amazon-listing-localize/SKILL.md](../../.clawec/skills/clawec-amazon-listing-localize/SKILL.md) | 主站 Listing 转目标地方站（多站点本地化） |
-| clawec-amazon-consumer-insights | [.clawec/skills/clawec-amazon-consumer-insights/SKILL.md](../../.clawec/skills/clawec-amazon-consumer-insights/SKILL.md) | 消费者洞察、用户画像、痛点与购买动机 |
-| clawec-amazon-review-analysis | [.clawec/skills/clawec-amazon-review-analysis/SKILL.md](../../.clawec/skills/clawec-amazon-review-analysis/SKILL.md) | 已有评论文本的 VOC 归纳（用户粘贴或导出摘要） |
-| clawec-amazon-advertising | [.clawec/skills/clawec-amazon-advertising/SKILL.md](../../.clawec/skills/clawec-amazon-advertising/SKILL.md) | 站内广告 SP/SB/SD、PPC、ACOS/TACOS |
-| clawec-amazon-account-appeal | [.clawec/skills/clawec-amazon-account-appeal/SKILL.md](../../.clawec/skills/clawec-amazon-account-appeal/SKILL.md) | 账号停用/限制申诉、POA 草稿 |
-| clawec-amazon-fba-claim-email | [.clawec/skills/clawec-amazon-fba-claim-email/SKILL.md](../../.clawec/skills/clawec-amazon-fba-claim-email/SKILL.md) | FBA 丢失/损坏/少件等索赔邮件草稿 |
-| clawec-amazon-report-hijacker | [.clawec/skills/clawec-amazon-report-hijacker/SKILL.md](../../.clawec/skills/clawec-amazon-report-hijacker/SKILL.md) | 举报跟卖 / 未授权卖家 Case 文案 |
+| clawec-amazon-listing-standard | [.clawec/skills/clawec-amazon-listing-standard/SKILL.md](../../skills/clawec-amazon-listing-standard/SKILL.md) | 新建/重写 Listing：标题、五点、描述（英文标准版） |
+| clawec-amazon-title-optimize | [.clawec/skills/clawec-amazon-title-optimize/SKILL.md](../../skills/clawec-amazon-title-optimize/SKILL.md) | 标题与前台文案 SEO 优化、热词埋入 |
+| clawec-amazon-description-optimize | [.clawec/skills/clawec-amazon-description-optimize/SKILL.md](../../skills/clawec-amazon-description-optimize/SKILL.md) | 商品描述生成与优化 |
+| clawec-amazon-backend-search-terms | [.clawec/skills/clawec-amazon-backend-search-terms/SKILL.md](../../skills/clawec-amazon-backend-search-terms/SKILL.md) | Seller Central 后台 Search Terms |
+| clawec-amazon-trending-keywords | [.clawec/skills/clawec-amazon-trending-keywords/SKILL.md](../../skills/clawec-amazon-trending-keywords/SKILL.md) | 热词/引流词候选（须自行用工具验证量级） |
+| clawec-amazon-listing-localize | [.clawec/skills/clawec-amazon-listing-localize/SKILL.md](../../skills/clawec-amazon-listing-localize/SKILL.md) | 主站 Listing 转目标地方站（多站点本地化） |
+| clawec-amazon-consumer-insights | [.clawec/skills/clawec-amazon-consumer-insights/SKILL.md](../../skills/clawec-amazon-consumer-insights/SKILL.md) | 消费者洞察、用户画像、痛点与购买动机 |
+| clawec-amazon-review-analysis | [.clawec/skills/clawec-amazon-review-analysis/SKILL.md](../../skills/clawec-amazon-review-analysis/SKILL.md) | 已有评论文本的 VOC 归纳（用户粘贴或导出摘要） |
+| clawec-amazon-advertising | [.clawec/skills/clawec-amazon-advertising/SKILL.md](../../skills/clawec-amazon-advertising/SKILL.md) | 站内广告 SP/SB/SD、PPC、ACOS/TACOS |
+| clawec-amazon-account-appeal | [.clawec/skills/clawec-amazon-account-appeal/SKILL.md](../../skills/clawec-amazon-account-appeal/SKILL.md) | 账号停用/限制申诉、POA 草稿 |
+| clawec-amazon-fba-claim-email | [.clawec/skills/clawec-amazon-fba-claim-email/SKILL.md](../../skills/clawec-amazon-fba-claim-email/SKILL.md) | FBA 丢失/损坏/少件等索赔邮件草稿 |
+| clawec-amazon-report-hijacker | [.clawec/skills/clawec-amazon-report-hijacker/SKILL.md](../../skills/clawec-amazon-report-hijacker/SKILL.md) | 举报跟卖 / 未授权卖家 Case 文案 |
 
-跨平台货源（用户明确要 1688 时）：[clawec-1688-product-search](../../.clawec/skills/clawec-1688-product-search/SKILL.md)
+跨平台货源（用户明确要 1688 时）：[clawec-1688-product-search](../../skills/clawec-1688-product-search/SKILL.md)
 
 ## 调度规则
 

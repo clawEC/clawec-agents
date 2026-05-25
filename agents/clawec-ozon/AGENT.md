@@ -15,13 +15,13 @@ description: Ozon 专项搜品 Agent。通过 Clawec API 完成俄罗斯及东�
 
 ## 认证与调用
 
-执行技能前须阅读 [.clawec/skills/clawec-ozon-product-search/SKILL.md](../../.clawec/skills/clawec-ozon-product-search/SKILL.md)。
+执行技能前须阅读 [.clawec/skills/clawec-ozon-product-search/SKILL.md](../../skills/clawec-ozon-product-search/SKILL.md)。
 
 ## 技能清单
 
 | Skill | 路径 | 何时使用 |
 |-------|------|----------|
-| clawec-ozon-product-search | [.clawec/skills/clawec-ozon-product-search/SKILL.md](../../.clawec/skills/clawec-ozon-product-search/SKILL.md) | Ozon 关键词搜品 |
+| clawec-ozon-product-search | [.clawec/skills/clawec-ozon-product-search/SKILL.md](../../skills/clawec-ozon-product-search/SKILL.md) | Ozon 关键词搜品 |
 
 ## 调度规则
 
