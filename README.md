@@ -67,7 +67,7 @@ clawec-agents/
 **快速安装：**
 
 ```bash
-git clone git@github.com:clawEC/clawec-agents.git
+git clone git@github.com-clawec:clawEC/clawec-agents.git
 cd your-ecommerce-project
 
 # Cursor
@@ -142,4 +142,4 @@ echo "${CLAWEC_API_KEY:+已设置（长度 ${#CLAWEC_API_KEY}）}${CLAWEC_API_KE
 
 ## License
 
-发布时请添加 `LICENSE` 文件（如 MIT）。
+本项目采用 [MIT License](https://github.com/clawEC/clawec-agents?tab=MIT-1-ov-file#readme)。
