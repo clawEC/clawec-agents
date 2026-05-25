@@ -1,3 +1,5 @@
 # Local install test output (use install.sh in your project, not in this repo)
 .cursor/
 .agents/
+
+.DS_Store
