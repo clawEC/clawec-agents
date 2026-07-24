@@ -106,7 +106,7 @@ clone_repo_if_needed() {
   if [[ -d "$REPO_ROOT/agents" ]]; then
     return 0
   fi
-  local url="${CLAWEC_SKILLS_GIT:-https://github.com/clawEC/clawec-agents.git}"
+  local url="${CLAWEC_SKILLS_GIT:-https://github.com/uni-infiniteai/clawec-agents.git}"
   local tmp
   tmp="$(mktemp -d)"
   echo ">> Cloning skills repo from $url ..."

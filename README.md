@@ -12,14 +12,16 @@
 
 ## Agents
 
-| Agent | 说明 | 定义 |
-|-------|------|------|
-| **clawec-product-search** | 可搜：亚马逊、1688、Shopee、Temu、Ozon、TikTok | [agents/clawec-product-search/AGENT.md](agents/clawec-product-search/AGENT.md) |
-| **clawec-amazon** | 亚马逊专项：搜品、机会分析、ASIN、评论、畅销榜/新品榜 | [agents/clawec-amazon/AGENT.md](agents/clawec-amazon/AGENT.md) |
-| **clawec-tiktok** | TikTok 专项：品类机会、达人趋势、雷达分 | [agents/clawec-tiktok/AGENT.md](agents/clawec-tiktok/AGENT.md) |
-| **clawec-temu** | Temu 专项：关键词搜品与竞品调研 | [agents/clawec-temu/AGENT.md](agents/clawec-temu/AGENT.md) |
-| **clawec-shopee** | Shopee（虾皮）专项：多站点关键词搜品 | [agents/clawec-shopee/AGENT.md](agents/clawec-shopee/AGENT.md) |
-| **clawec-ozon** | Ozon 专项：俄罗斯及东欧关键词搜品 | [agents/clawec-ozon/AGENT.md](agents/clawec-ozon/AGENT.md) |
+与站内默认官方员工对齐（对话入口含 `item_id`）：
+
+| Agent | 说明 | 站内对话 | 定义 |
+|-------|------|----------|------|
+| **clawec-amazon** | 亚马逊数据分析：选产品、ABA/关键词、类目、竞品、ASIN 流量与销量、评论等 | [/chat?item_id=a7111554-68ee-4e90-bfc7-bb2e14d7a9c3](https://www.clawec.com/chat?item_id=a7111554-68ee-4e90-bfc7-bb2e14d7a9c3) | [agents/clawec-amazon/AGENT.md](agents/clawec-amazon/AGENT.md) |
+| **clawec-tiktok** | TikTok 数据分析：品类机会、选品、单品与店铺分析 | [/chat?item_id=34b45822-8376-40d0-ab03-f408e7c9f72b](https://www.clawec.com/chat?item_id=34b45822-8376-40d0-ab03-f408e7c9f72b) | [agents/clawec-tiktok/AGENT.md](agents/clawec-tiktok/AGENT.md) |
+| **clawec-shopee** | Shopee 数据分析：搜品、榜单/趋势、热搜词、商品与店铺详情 | [/chat?item_id=f78a4cc6-2f07-43fa-a703-1fe97dbedc32](https://www.clawec.com/chat?item_id=f78a4cc6-2f07-43fa-a703-1fe97dbedc32) | [agents/clawec-shopee/AGENT.md](agents/clawec-shopee/AGENT.md) |
+| **clawec-ozon** | Ozon 数据分析：搜品、热销榜、详情、流量词与热搜词 | [/chat?item_id=94745faf-20e5-4a38-b027-9f180a2e3084](https://www.clawec.com/chat?item_id=94745faf-20e5-4a38-b027-9f180a2e3084) | [agents/clawec-ozon/AGENT.md](agents/clawec-ozon/AGENT.md) |
+| **clawec-design** | AI 设计师：商品图/A+、AI 生图、短视频、文案提取与仿写、数字人商品视频 | [/chat?item_id=bea8bff2-6a44-4c7a-8d36-12a5d4cdae3b](https://www.clawec.com/chat?item_id=bea8bff2-6a44-4c7a-8d36-12a5d4cdae3b) | [agents/clawec-design/AGENT.md](agents/clawec-design/AGENT.md) |
+| **clawec-temu** | Temu 专项：关键词搜品与竞品调研 | [/product/temu-search](https://www.clawec.com/product/temu-search) | [agents/clawec-temu/AGENT.md](agents/clawec-temu/AGENT.md) |
 
 ## 仓库结构
 
@@ -67,7 +69,7 @@ clawec-agents/
 **快速安装：**
 
 ```bash
-git clone git@github.com-clawec:clawEC/clawec-agents.git
+git clone https://github.com/uni-infiniteai/clawec-agents.git
 cd your-ecommerce-project
 
 # Cursor
@@ -80,8 +82,8 @@ cd your-ecommerce-project
 一条命令安装：
 
 ```bash
-export CLAWEC_SKILLS_GIT="https://github.com/clawEC/clawec-agents.git"
-curl -fsSL https://raw.githubusercontent.com/clawEC/clawec-agents/main/scripts/install.sh | bash -s -- --tool claude-code .
+export CLAWEC_SKILLS_GIT="https://github.com/uni-infiniteai/clawec-agents.git"
+curl -fsSL https://raw.githubusercontent.com/uni-infiniteai/clawec-agents/main/scripts/install.sh | bash -s -- --tool claude-code .
 ```
 
 仅更新 Agent 定义（已有 `.clawec/skills/`）：`./scripts/install.sh --tool <工具> . --rules-only`
@@ -118,4 +120,4 @@ source ~/.zshrc
 
 ## License
 
-本项目采用 [MIT License](https://github.com/clawEC/clawec-agents?tab=MIT-1-ov-file#readme)。
+本项目采用 [MIT License](https://github.com/uni-infiniteai/clawec-agents?tab=MIT-1-ov-file#readme)。
