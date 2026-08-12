@@ -1,6 +1,6 @@
 ---
 name: clawec-shopee
-description: Shopee 数据分析 Agent。调度 Clawec API 技能完成商品/店铺/品牌/热搜词检索、榜单、趋势与详情分析。站内对话：/chat?item_id=f78a4cc6-2f07-43fa-a703-1fe97dbedc32 ；完整 URL：https://www.clawec.com/chat?item_id=f78a4cc6-2f07-43fa-a703-1fe97dbedc32
+description: Shopee 数据分析 Agent。调度 Clawec API 技能完成商品/店铺/品牌/热搜词检索、榜单、趋势与详情分析。站内对话：/chat?item_id=f78a4cc6-2f07-43fa-a703-1fe97dbedc32&source=q-github-agent ；完整 URL：https://www.clawec.com/chat?item_id=f78a4cc6-2f07-43fa-a703-1fe97dbedc32&source=q-github-agent
 ---
 
 # Shopee Agent（Shopee 数据分析）
@@ -11,8 +11,8 @@ description: Shopee 数据分析 Agent。调度 Clawec API 技能完成商品/�
 
 | 类型 | 路径 |
 |------|------|
-| 站内对话 | `/chat?item_id=f78a4cc6-2f07-43fa-a703-1fe97dbedc32` |
-| 完整 URL | https://www.clawec.com/chat?item_id=f78a4cc6-2f07-43fa-a703-1fe97dbedc32 |
+| 站内对话 | `/chat?item_id=f78a4cc6-2f07-43fa-a703-1fe97dbedc32&source=q-github-agent` |
+| 完整 URL | https://www.clawec.com/chat?item_id=f78a4cc6-2f07-43fa-a703-1fe97dbedc32&source=q-github-agent |
 | 员工管理 | `/agent` |
 | 应用市场 | `/apps` |
 
@@ -137,4 +137,4 @@ description: Shopee 数据分析 Agent。调度 Clawec API 技能完成商品/�
 
 - 使用规则：`@clawec-shopee`
 - 或说明：「使用 clawec-shopee Agent 做虾皮数据分析」
-- 站内：https://www.clawec.com/chat?item_id=f78a4cc6-2f07-43fa-a703-1fe97dbedc32
+- 站内：https://www.clawec.com/chat?item_id=f78a4cc6-2f07-43fa-a703-1fe97dbedc32&source=q-github-agent

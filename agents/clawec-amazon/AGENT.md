@@ -1,6 +1,6 @@
 ---
 name: clawec-amazon
-description: 亚马逊数据分析 Agent。调度 Clawec API 技能完成选品、ABA/关键词、类目集中度、竞品监控、ASIN 详情/趋势/预测/评论、流量词与流量来源等。站内对话：/chat?item_id=a7111554-68ee-4e90-bfc7-bb2e14d7a9c3 ；完整 URL：https://www.clawec.com/chat?item_id=a7111554-68ee-4e90-bfc7-bb2e14d7a9c3
+description: 亚马逊数据分析 Agent。调度 Clawec API 技能完成选品、ABA/关键词、类目集中度、竞品监控、ASIN 详情/趋势/预测/评论、流量词与流量来源等。站内对话：/chat?item_id=a7111554-68ee-4e90-bfc7-bb2e14d7a9c3&source=q-github-agent ；完整 URL：https://www.clawec.com/chat?item_id=a7111554-68ee-4e90-bfc7-bb2e14d7a9c3&source=q-github-agent
 ---
 
 # Amazon Agent（亚马逊数据分析）
@@ -11,8 +11,8 @@ description: 亚马逊数据分析 Agent。调度 Clawec API 技能完成选品�
 
 | 类型 | 路径 |
 |------|------|
-| 站内对话 | `/chat?item_id=a7111554-68ee-4e90-bfc7-bb2e14d7a9c3` |
-| 完整 URL | https://www.clawec.com/chat?item_id=a7111554-68ee-4e90-bfc7-bb2e14d7a9c3 |
+| 站内对话 | `/chat?item_id=a7111554-68ee-4e90-bfc7-bb2e14d7a9c3&source=q-github-agent` |
+| 完整 URL | https://www.clawec.com/chat?item_id=a7111554-68ee-4e90-bfc7-bb2e14d7a9c3&source=q-github-agent |
 | 员工管理 | `/agent` |
 | 应用市场 | `/apps` |
 
@@ -138,4 +138,4 @@ description: 亚马逊数据分析 Agent。调度 Clawec API 技能完成选品�
 
 - 使用规则：`@clawec-amazon`
 - 或说明：「使用 clawec-amazon Agent 做亚马逊数据分析」
-- 站内：https://www.clawec.com/chat?item_id=a7111554-68ee-4e90-bfc7-bb2e14d7a9c3
+- 站内：https://www.clawec.com/chat?item_id=a7111554-68ee-4e90-bfc7-bb2e14d7a9c3&source=q-github-agent

@@ -1,6 +1,6 @@
 ---
 name: clawec-tiktok
-description: TikTok 数据分析 Agent。调度 Clawec API 技能完成商品/店铺/达人/直播/视频检索与分析，以及类目市场、热销/新品榜等。站内对话：/chat?item_id=34b45822-8376-40d0-ab03-f408e7c9f72b ；完整 URL：https://www.clawec.com/chat?item_id=34b45822-8376-40d0-ab03-f408e7c9f72b
+description: TikTok 数据分析 Agent。调度 Clawec API 技能完成商品/店铺/达人/直播/视频检索与分析，以及类目市场、热销/新品榜等。站内对话：/chat?item_id=34b45822-8376-40d0-ab03-f408e7c9f72b&source=q-github-agent ；完整 URL：https://www.clawec.com/chat?item_id=34b45822-8376-40d0-ab03-f408e7c9f72b&source=q-github-agent
 ---
 
 # TikTok Agent（TikTok 数据分析）
@@ -11,8 +11,8 @@ description: TikTok 数据分析 Agent。调度 Clawec API 技能完成商品/�
 
 | 类型 | 路径 |
 |------|------|
-| 站内对话 | `/chat?item_id=34b45822-8376-40d0-ab03-f408e7c9f72b` |
-| 完整 URL | https://www.clawec.com/chat?item_id=34b45822-8376-40d0-ab03-f408e7c9f72b |
+| 站内对话 | `/chat?item_id=34b45822-8376-40d0-ab03-f408e7c9f72b&source=q-github-agent` |
+| 完整 URL | https://www.clawec.com/chat?item_id=34b45822-8376-40d0-ab03-f408e7c9f72b&source=q-github-agent |
 | 员工管理 | `/agent` |
 | 应用市场 | `/apps` |
 
@@ -139,4 +139,4 @@ description: TikTok 数据分析 Agent。调度 Clawec API 技能完成商品/�
 
 - 使用规则：`@clawec-tiktok`
 - 或说明：「使用 clawec-tiktok Agent 做 TikTok 数据分析」
-- 站内：https://www.clawec.com/chat?item_id=34b45822-8376-40d0-ab03-f408e7c9f72b
+- 站内：https://www.clawec.com/chat?item_id=34b45822-8376-40d0-ab03-f408e7c9f72b&source=q-github-agent

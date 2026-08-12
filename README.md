@@ -18,10 +18,10 @@
 
 | Agent | 说明 | 技能数 | 站内对话 | 定义 |
 |-------|------|--------|----------|------|
-| **clawec-amazon** | 亚马逊：选品、ABA/关键词、类目集中度、竞品、ASIN 详情/趋势/预测/评论、流量分析 | 20 | [/chat?item_id=a7111554-68ee-4e90-bfc7-bb2e14d7a9c3](https://www.clawec.com/chat?item_id=a7111554-68ee-4e90-bfc7-bb2e14d7a9c3) | [agents/clawec-amazon/AGENT.md](agents/clawec-amazon/AGENT.md) |
-| **clawec-tiktok** | TikTok：商品/店铺/达人/直播/视频、类目市场与热销/新品榜 | 33 | [/chat?item_id=34b45822-8376-40d0-ab03-f408e7c9f72b](https://www.clawec.com/chat?item_id=34b45822-8376-40d0-ab03-f408e7c9f72b) | [agents/clawec-tiktok/AGENT.md](agents/clawec-tiktok/AGENT.md) |
-| **clawec-shopee** | Shopee：商品/店铺/品牌/热搜词检索、榜单、趋势与详情 | 21 | [/chat?item_id=f78a4cc6-2f07-43fa-a703-1fe97dbedc32](https://www.clawec.com/chat?item_id=f78a4cc6-2f07-43fa-a703-1fe97dbedc32) | [agents/clawec-shopee/AGENT.md](agents/clawec-shopee/AGENT.md) |
-| **clawec-ozon** | Ozon：类目/商品/店铺/品牌/关键词榜单、详情、趋势快照与流量词 | 17 | [/chat?item_id=94745faf-20e5-4a38-b027-9f180a2e3084](https://www.clawec.com/chat?item_id=94745faf-20e5-4a38-b027-9f180a2e3084) | [agents/clawec-ozon/AGENT.md](agents/clawec-ozon/AGENT.md) |
+| **clawec-amazon** | 亚马逊：选品、ABA/关键词、类目集中度、竞品、ASIN 详情/趋势/预测/评论、流量分析 | 20 | [/chat?item_id=a7111554-68ee-4e90-bfc7-bb2e14d7a9c3&source=q-github-agent](https://www.clawec.com/chat?item_id=a7111554-68ee-4e90-bfc7-bb2e14d7a9c3&source=q-github-agent) | [agents/clawec-amazon/AGENT.md](agents/clawec-amazon/AGENT.md) |
+| **clawec-tiktok** | TikTok：商品/店铺/达人/直播/视频、类目市场与热销/新品榜 | 33 | [/chat?item_id=34b45822-8376-40d0-ab03-f408e7c9f72b&source=q-github-agent](https://www.clawec.com/chat?item_id=34b45822-8376-40d0-ab03-f408e7c9f72b&source=q-github-agent) | [agents/clawec-tiktok/AGENT.md](agents/clawec-tiktok/AGENT.md) |
+| **clawec-shopee** | Shopee：商品/店铺/品牌/热搜词检索、榜单、趋势与详情 | 21 | [/chat?item_id=f78a4cc6-2f07-43fa-a703-1fe97dbedc32&source=q-github-agent](https://www.clawec.com/chat?item_id=f78a4cc6-2f07-43fa-a703-1fe97dbedc32&source=q-github-agent) | [agents/clawec-shopee/AGENT.md](agents/clawec-shopee/AGENT.md) |
+| **clawec-ozon** | Ozon：类目/商品/店铺/品牌/关键词榜单、详情、趋势快照与流量词 | 17 | [/chat?item_id=94745faf-20e5-4a38-b027-9f180a2e3084&source=q-github-agent](https://www.clawec.com/chat?item_id=94745faf-20e5-4a38-b027-9f180a2e3084&source=q-github-agent) | [agents/clawec-ozon/AGENT.md](agents/clawec-ozon/AGENT.md) |
 
 ## 仓库结构
 

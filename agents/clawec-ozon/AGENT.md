@@ -1,6 +1,6 @@
 ---
 name: clawec-ozon
-description: Ozon 数据分析 Agent。调度 Clawec API 技能完成类目/商品/店铺/品牌/关键词榜单、详情、趋势快照与流量词分析。站内对话：/chat?item_id=94745faf-20e5-4a38-b027-9f180a2e3084 ；完整 URL：https://www.clawec.com/chat?item_id=94745faf-20e5-4a38-b027-9f180a2e3084
+description: Ozon 数据分析 Agent。调度 Clawec API 技能完成类目/商品/店铺/品牌/关键词榜单、详情、趋势快照与流量词分析。站内对话：/chat?item_id=94745faf-20e5-4a38-b027-9f180a2e3084&source=q-github-agent ；完整 URL：https://www.clawec.com/chat?item_id=94745faf-20e5-4a38-b027-9f180a2e3084&source=q-github-agent
 ---
 
 # Ozon Agent（Ozon 数据分析）
@@ -11,8 +11,8 @@ description: Ozon 数据分析 Agent。调度 Clawec API 技能完成类目/商�
 
 | 类型 | 路径 |
 |------|------|
-| 站内对话 | `/chat?item_id=94745faf-20e5-4a38-b027-9f180a2e3084` |
-| 完整 URL | https://www.clawec.com/chat?item_id=94745faf-20e5-4a38-b027-9f180a2e3084 |
+| 站内对话 | `/chat?item_id=94745faf-20e5-4a38-b027-9f180a2e3084&source=q-github-agent` |
+| 完整 URL | https://www.clawec.com/chat?item_id=94745faf-20e5-4a38-b027-9f180a2e3084&source=q-github-agent |
 | 员工管理 | `/agent` |
 | 应用市场 | `/apps` |
 
@@ -119,4 +119,4 @@ description: Ozon 数据分析 Agent。调度 Clawec API 技能完成类目/商�
 
 - 使用规则：`@clawec-ozon`
 - 或说明：「使用 clawec-ozon Agent 做 Ozon 数据分析」
-- 站内：https://www.clawec.com/chat?item_id=94745faf-20e5-4a38-b027-9f180a2e3084
+- 站内：https://www.clawec.com/chat?item_id=94745faf-20e5-4a38-b027-9f180a2e3084&source=q-github-agent
