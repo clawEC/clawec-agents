@@ -1,57 +1,99 @@
 ---
 name: clawec-amazon-product-research
-description: 通过 ClawEC API 进行亚马逊选产品调研（市场/月份/类目/关键词/fastMode 选品模式，可选 AI 解读）。在用户需要选产品、product research、亚马逊选品时使用。
+description: 通过 clawEC API 按销量、BSR、价格等多维条件筛选亚马逊商品。在用户需要亚马逊选品分析、商品调研、product research 时使用。
 ---
 
-# 选产品（Product Research）
+# 亚马逊选品分析
 
-## 关于 ClawEC
+## 关于 clawEC
 
-ClawEC（虾船长）是跨境电商一站式 AI 工具箱，为亚马逊卖家提供选品调研、关键词分析、市场趋势、竞品监控、流量来源、ASIN 优势分析、FBA 利润测算等数据工具，并支持 AI 解读与定时任务，帮助卖家在低人力条件下完成从市场调研到运营决策的闭环。
+clawEC 是一款面向跨境电商场景的 AI 智能体协同平台，以「你的跨境电商 AI 团队」为品牌主张，将选品、调研、运营、上架、营销、客服、采购、合规等环节沉淀为可执行的 SOP（标准作业程序），帮助卖家在单人或少人条件下完成跨境业务闭环，降低对专业运营团队与复杂本地部署的依赖。
 
-本技能调用 ClawEC 开放 API，与 Web 端 `/tool/product-research` 页面一致。
+本技能调用 clawEC 开放 API，用于根据销量、销额、BSR、价格、评分等多维度条件筛选亚马逊商品。
+
 
 ## 认证与基址
 
 - **Base URL**: `https://www.clawec.com/api`
-- **API Key**: 在 https://www.clawec.com/?source=q-github-agent 注册帐号，然后去 https://www.clawec.com/api-key?source=q-github-agent 获取 key
+- **API Key**: 在 https://www.clawec.com/?source=q-github-agent  注册帐号     然后去https://www.clawec.com/api-key?source=q-github-agent  获取key
 - **请求头**:
   - `Content-Type: application/json`
   - `Authorization: Bearer <API_KEY>`
 
 优先从环境变量 `CLAWEC_API_KEY` 读取密钥；未设置时向用户索取，勿硬编码。
----
 
-## 完整流程
 
-```
-Step 1  POST /aigc/ec/amazon/product_research/search              → 提交搜索
-Step 2  GET  /aigc/ec/amazon/product_research/search/logs          → 定位记录
-Step 3  GET  /aigc/ec/amazon/product_research/search/log/detail   → 获取结果
-Step 4  （aiInterpret=true 时）轮询 log/detail                    → 等待 AI 解读
-```
+## 接口
 
-Web 端通过 WebSocket `product_research_result_refresh` 推送刷新；脚本场景用 **轮询 log/detail** 即可。
+`POST /aigc/ec/amazon/data/product/research`
 
-类目列表（可选）：`GET /aigc/ec/amazon/category_research/categories?marketplace=US&month=202505`
+| 参数 | 位置 | 必填 | 说明 |
+|------|------|------|------|
+| marketplace | body | 是 | 市场编码 US=美国 UK=英国 ES=西班牙 FR=法国 DE=德国 IT=意大利 CA=加拿大 JP=日本 |
+| month | body | 否 | 查询月份，格式yyyyMM，示例：202507 |
+| keyword | body | 否 | 关键字 |
+| includeSellers | body | 否 | 包含卖家 |
+| excludeSellers | body | 否 | 排除卖家 |
+| matchType | body | 否 | 匹配方式，1词组匹配 2模糊匹配 3精准匹配，默认2 |
+| excludeKeywords | body | 否 | 排除的关键字 |
+| minPrice | body | 否 | 最低价格 |
+| maxPrice | body | 否 | 最高价格 |
+| minRating | body | 否 | 最低评分值 |
+| maxRating | body | 否 | 最高评分值 |
+| minRatings | body | 否 | 最低评分数 |
+| maxRatings | body | 否 | 最高评分数 |
+| minRatingsCv | body | 否 | 最低月新增评分数 |
+| maxRatingsCv | body | 否 | 最高月新增评分数 |
+| minSellers | body | 否 | 最小卖家数量 |
+| maxSellers | body | 否 | 最大卖家数量 |
+| minProfit | body | 否 | 最小毛利率 |
+| maxProfit | body | 否 | 最大毛利率 |
+| minBsr | body | 否 | 大类BSR最高排名 |
+| maxBsr | body | 否 | 大类BSR最低排名 |
+| minBsrCv | body | 否 | BSR最低增长数 |
+| maxBsrCv | body | 否 | BSR最高增长数 |
+| minBsrCr | body | 否 | BSR最低增长率 |
+| maxBsrCr | body | 否 | BSR最高增长率 |
+| minUnits | body | 否 | 最低月销量 |
+| maxUnits | body | 否 | 最高月销量 |
+| minAmzUnit | body | 否 | 最低月子体销量 |
+| maxAmzUnit | body | 否 | 最高月子体销量 |
+| minRevenue | body | 否 | 最低月销售额 |
+| maxRevenue | body | 否 | 最高月销售额 |
+| minRevenueCr | body | 否 | 月销售额最低增长率 |
+| maxRevenueCr | body | 否 | 月销售额最高增长率 |
+| minUnitsCr | body | 否 | 月销量最低增长率 |
+| maxUnitsCr | body | 否 | 月销量最高增长率 |
+| weightUnit | body | 否 | 重量单位，默认g |
+| minWeights | body | 否 | 最小重量 |
+| maxWeights | body | 否 | 最大重量 |
+| minVariations | body | 否 | 最低变体数 |
+| maxVariations | body | 否 | 最高变体数 |
+| filterSub | body | 否 | 是否筛选子类目，Y：是，只有在指定类目时才会生效 |
+| minSubBsrRank | body | 否 | 最小子类排名，只有filterSub=Y时才生效 |
+| maxSubBsrRank | body | 否 | 最大子类排名，只有filterSub=Y时才生效 |
+| includeBrands | body | 否 | 包含品牌 |
+| excludeBrands | body | 否 | 排除品牌 |
+| nodeIdPaths | body | 否 | 类目节点 nodeIdPath 列表。类目节点 id 路径，格式为 父节点ID:子节点ID。   家电-家电保修：2619525011:2242350011 家电-洗碗机：2619525011:3741271 家电-垃圾处理机：261… |
+| nodeIdPathEqual | body | 否 | true为类目精确查询 false为查询当前及子类目，默认false |
+| availableMonth | body | 否 | 上架月份 |
+| dimensionType | body | 否 | 尺寸类型集合，逗号分隔 |
+| minFba | body | 否 | FBA最低运费 |
+| maxFba | body | 否 | FBA最高运费 |
+| minLqs | body | 否 | 最低Listing页面质量分 |
+| maxLqs | body | 否 | 最高Listing页面质量分 |
+| sellerNation | body | 否 | 卖家所属地，多条件查询用逗号隔开 |
+| badgeBS | body | 否 | 是否有热销标识Best Seller，Y：是 |
+| badgeAC | body | 否 | 是否有热销标识Amazon's Choice，Y：是 |
+| badgeNR | body | 否 | 是否有新品标识New Release，Y：是 |
+| fulfillment | body | 否 | 配送方式，多条件查询用逗号隔开，AMZ/FBA/FBM |
+| variation | body | 否 | 是否查询变体asin，N:含变体 Y:不含变体 |
+| page | body | 否 | 页码，从1开始，默认1 |
+| size | body | 否 | 每页条数，默认50，最大100 |
+| order | body | 否 | 排序 |
 
----
 
-## Step 1：提交搜索
-
-`POST /aigc/ec/amazon/product_research/search`
-
-| 参数 | 必填 | 说明 |
-|------|------|------|
-| marketplace | 是 | 市场代码 |
-| month | 是 | 数据月份 yyyyMM |
-| keyword | 否 | 关键词 |
-| nodeIdPaths | 否 | 类目路径数组 |
-| matchType | 否 | Web 端固定 `2` |
-| aiInterpret | 否 | AI 解读，默认 false |
-| fastMode 过滤器 | 否 | 见下表 |
-
-### marketplace
+### marketplace 取值
 
 | 代码 | 市场 |
 |------|------|
@@ -64,101 +106,47 @@ Web 端通过 WebSocket `product_research_result_refresh` 推送刷新；脚本�
 | CA | 加拿大 |
 | JP | 日本 |
 
-### fastMode（`--fast-mode`）
-
-| ID | 模式 |
-|----|------|
-| low_price_long_tail | 低价长尾 |
-| sales_surge | 销量飙升 |
-| potential_market | 潜力市场 |
-| unmet_market | 未被满足市场 |
-| speculative_market | 投机市场 |
-| broad_listing | 全品类铺货 |
-| premium_listing | 精品铺货 |
-| low_price | 低价商品 |
-| beginner | 新手推荐 |
+## 调用
 
 ```bash
-curl -s -X POST "https://www.clawec.com/api/aigc/ec/amazon/product_research/search" \
+curl -s -X POST "https://www.clawec.com/api/aigc/ec/amazon/data/product/research" \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $CLAWEC_API_KEY" \
-  -d '{"marketplace":"US","month":"202505","keyword":"phone case","matchType":2,"page":1,"size":50,"nodeIdPathEqual":false,"aiInterpret":true}'
-
-bash scripts/search.sh US --month 202505 --keyword "phone case" --ai
-bash scripts/search_and_poll.sh US --month 202505 --fast-mode beginner --ai
+  -d '{"marketplace": "US", "month": "202507", "keyword": "wireless earbuds", "page": "1", "size": "50"}'
 ```
 
----
-
-## Step 2：历史列表
-
-`GET /aigc/ec/amazon/product_research/search/logs?start=1&size=20`
+筛选参数较多时，推荐直接传 JSON body（或 `@payload.json`）。
+或使用脚本：
 
 ```bash
-bash scripts/logs.sh 1 20
+bash scripts/query.sh '{"marketplace":"US","month":"202507","keyword":"wireless earbuds","page":"1","size":"50"}'
+
+bash scripts/query.sh @payload.json
 ```
-
----
-
-## Step 3：详情
-
-`GET /aigc/ec/amazon/product_research/search/log/detail?id=<ID>`
-
-```bash
-bash scripts/log_detail.sh 123456789
-```
-
-| 字段 | 说明 |
-|------|------|
-| aiStatus | `appending` 解读中；`success` 已完成；`fail` 失败 |
-| aiAnalysis | AI 解读正文（Markdown） |
-| param.aiInterpret | 是否请求了 AI 解读 |
-
----
-
-## Step 4：AI 解读轮询
-
-当 `aiInterpret=true` 时，搜索完成后 AI 解读为异步任务：
-
-1. 调用 `log/detail`，检查 `aiStatus`
-2. `aiStatus === "appending"` 或尚无 `aiStatus` 时，等待 **3–5 秒** 后重试
-3. `aiStatus === "success"` 时读取 `aiAnalysis` 并输出
-4. `aiStatus === "fail"` 时告知用户解读失败，仍可输出原始数据
-5. 建议最多轮询 **60 次**（约 3–5 分钟），超时则返回当前状态并提示稍后重查
-
-```bash
-bash scripts/search_and_poll.sh US --month 202505 --keyword "phone case" --ai
-```
-
----
 
 ## 响应结构
 
 ```json
 {
   "status": 1,
-  "code": 200,
-  "msg": "success",
-  "data": { ... },
-  "pointInfo": { "type": 0, "point": 0 }
+  "data": { ... }
 }
 ```
 
 - `status`: `1` = 成功，`0` = 失败
-- `code`: 业务码；`2001` = 未登录/Token 无效，`2002` = 积分不足
-- `data`: 业务数据
-- `pointInfo`: 积分消耗信息
+- 成功时解析 `data` 按用户需求整理为中文摘要即可（无需卡片组件）
 
----
 
 ## 工作流程
 
-1. 确认 marketplace、month；可选 keyword、nodeIdPaths、fastMode
-2. 调用 search → logs 匹配 → log/detail
-3. 若 aiInterpret，轮询 AI
-4. 输出中文摘要：条件、Top 商品、指标、AI 解读
+1. 确认 marketplace（必填）及其他筛选条件；参数较多时用 JSON 传入
+2. 检查 `CLAWEC_API_KEY` 是否可用
+3. 执行 API 请求
+4. 失败时说明错误并提示检查密钥与关键参数
+5. 解析返回数据，整理为中文摘要
 
 ## 输出建议
 
-- 搜索条件、结果条数、Top ASIN（BSR/销量/价格/利润率）
-- AI 解读全文（若开启）
+- 查询条件：市场与主要筛选条件
+- 商品列表核心字段：价格、评分、销量、销额、BSR、品牌等
+- 给出 2–3 条选品机会观察

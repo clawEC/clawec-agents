@@ -1,31 +1,34 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-CATEGORY_ID="${1:?用法: query.sh <categoryId> [period] [pageNo] [pageSize] [sortField] [sortDirection] [language] [updatePeriod]}"
-PERIOD="${2:-SEVEN_DAY}"
-PAGE_NO="${3:-1}"
-PAGE_SIZE="${4:-15}"
-SORT_FIELD="${5:-GMV}"
-SORT_DIRECTION="${6:-DESC}"
-LANGUAGE="${7:-CH}"
-UPDATE_PERIOD="${8:-}"
+CATEGORYID="${1:?用法: query.sh <categoryId> [pageNo] [pageSize] [language] [period] [updatePeriod] [sortField] [sortDirection]}"
+PAGENO="${2:-}"
+PAGESIZE="${3:-}"
+LANGUAGE="${4:-}"
+PERIOD="${5:-}"
+UPDATEPERIOD="${6:-}"
+SORTFIELD="${7:-}"
+SORTDIRECTION="${8:-}"
 API_KEY="${CLAWEC_API_KEY:?请设置环境变量 CLAWEC_API_KEY}"
 
-PAYLOAD=$(python3 -c '
-import json, sys
-body = {
-  "categoryId": int(sys.argv[1]),
-  "period": sys.argv[2],
-  "pageNo": int(sys.argv[3]),
-  "pageSize": int(sys.argv[4]),
-  "sortField": sys.argv[5],
-  "sortDirection": sys.argv[6],
-  "language": sys.argv[7],
-}
-if len(sys.argv) > 8 and sys.argv[8]:
-    body["updatePeriod"] = sys.argv[8]
-print(json.dumps(body))
-' "$CATEGORY_ID" "$PERIOD" "$PAGE_NO" "$PAGE_SIZE" "$SORT_FIELD" "$SORT_DIRECTION" "$LANGUAGE" "$UPDATE_PERIOD")
+_KEYS='["categoryId", "pageNo", "pageSize", "language", "period", "updatePeriod", "sortField", "sortDirection"]'
+_REQUIRED='["categoryId"]'
+PAYLOAD=$(KEYS="$_KEYS" REQUIRED="$_REQUIRED" python3 - "${CATEGORYID}" "${PAGENO}" "${PAGESIZE}" "${LANGUAGE}" "${PERIOD}" "${UPDATEPERIOD}" "${SORTFIELD}" "${SORTDIRECTION}" <<'PY'
+import json, os, sys
+keys = json.loads(os.environ["KEYS"])
+required = set(json.loads(os.environ["REQUIRED"]))
+vals = sys.argv[1:]
+body = {}
+for k, v in zip(keys, vals):
+    v = (v or "").strip()
+    if not v:
+        if k in required:
+            raise SystemExit(f"{k} 不能为空")
+        continue
+    body[k] = v
+print(json.dumps(body, ensure_ascii=False))
+PY
+)
 
 curl -s -X POST "https://www.clawec.com/api/aigc/ec/ozon/data/category/hot-ranking" \
   -H "Content-Type: application/json" \
